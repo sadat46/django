@@ -1,0 +1,36 @@
+{% block content %}
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+  <body>
+        <header>
+                <div class="container">
+                    <div id="branding">
+                        <h1><span class="highlight">Enjoy</span> Leatest Movie</h1>
+        
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/home/">Home</a></li>
+                            <li><a href="/view_movie/">VIEW MOVIE</a></li>
+                            <li><a href="/webpage/">WEBPAGE</a></li>
+                            <li><a href="/MovieReview/">Movie Review</a></li>
+                            <li><a href="/admin">Admin Login</a></li>
+                        </ul>
+                    </nav>
+        
+                </div>
+        </header>
+                    
+           <form method="POST"> {% csrf_token %}
+                <div class="container">
+                    {{ form.as_p}}
+                    <input type="submit" value="Save" />
+                </div>    
+                
+            </form>
+ </body>
+</html>
+{% endblock %}

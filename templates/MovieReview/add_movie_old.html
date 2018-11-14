@@ -1,0 +1,50 @@
+{% block content %}
+{% load static %}
+<form method="POST">
+        {% csrf_token %}
+        <br>
+        <br>
+            <div class="container">
+                <label for="movie_name">Movie Name</label>
+                <input type="text" placeholder="Enter Movie Name">
+            </div>
+            <br>
+            
+            <div class="container">
+                <label for="movie_review">Movie Review</label>
+                <select name="rating" id="">
+                <option value="1">5</option>
+                <option value="1">6</option>
+                <option value="1">7</option>
+                <option value="1">8</option>
+                <option value="1">9</option>
+                <option value="1">10</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+                <label for="movie_release_date">Release Date</label>
+                <input type="date">
+            </div>
+            <br>
+            <div class="container">
+                <label for="movie_type">Genere</label>
+                <select name="gender" id="gender">
+                    <option value="action">Action</option>
+                    <option value="horror">Horror</option>
+                    <option value="sciencefiction">sciencefiction</option>
+                </select>
+            </div>
+            <br>
+            <div class="container">
+            <label for="movie_details">Movie Details</label>
+            <textarea name="msg" id="" cols="25" rows="5" placeholder="Enter Movie details here"></textarea>
+            </div>
+            <br>
+            <div class="container">
+                <input type="submit" value="Submit">
+            </div>
+        
+   </form>
+   
+{% endblock %}
